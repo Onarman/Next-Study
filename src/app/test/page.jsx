@@ -1,5 +1,12 @@
 import React from "react";
 
-export default function page() {
-  return <div>page</div>;
+async function delay(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
+
+async function TestRoute() {
+  await delay(3000);
+  return <div>Taste Route</div>;
+}
+
+export default TestRoute;
