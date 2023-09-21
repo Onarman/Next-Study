@@ -1,8 +1,9 @@
 import React from "react";
+import { notFound } from "next/navigation";
 
 function Blog({ searchParams }) {
-  if (searchParams.error === "true") {
-    throw new Error("This is an error!");
+  if (searchParams.test === "true") {
+    notFound();
   }
   return (
     <div>
